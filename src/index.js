@@ -6,8 +6,19 @@ const App = () => {
     (position) => console.log(position), (err) => console.log(err)
   )
     return (
-      <div></div>
+      <div>Latittude: </div>
     )
+}
+
+class App extends React.Component {
+render () {
+    window.navigator.geolocation.getCurrentPosition(
+      (position) => console.log(position), (err) => console.log(err)
+    )
+      return (
+        <div>Latittude: </div>
+      )
+}
 }
 
 ReactDOM.render(
